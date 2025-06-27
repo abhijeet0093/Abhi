@@ -1,19 +1,15 @@
-
 public class GenericProblems {
 
-    // 1. Count Occurrence of Element
     public static <T> int countOccurrences(T[] arr, T target) {
         int count = 0;
         for (T item : arr) {
             if (item.equals(target)) {
                 count++;
-
             }
         }
         return count;
     }
 
-    // 2. Linear Search
     public static <T> int linearSearch(T[] arr, T target) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].equals(target)) {
@@ -23,7 +19,6 @@ public class GenericProblems {
         return -1;
     }
 
-    // 3. Find Min and Max
     public static <T extends Comparable<T>> T findMin(T[] arr) {
         T min = arr[0];
         for (T item : arr) {
@@ -44,7 +39,6 @@ public class GenericProblems {
         return max;
     }
 
-    // 4. Check if Sorted (non-descending)
     public static <T extends Comparable<T>> boolean isSorted(T[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i].compareTo(arr[i + 1]) > 0) {
@@ -101,7 +95,7 @@ public class GenericProblems {
         System.out.println("Middle: " + findMiddle(words));
         checkTwoElements(words, "a", "c");
 
-        String sentence = "Solapur Education Society Solapur Maharastra";
-        findSubstring(sentence, "Solapur");
+        String sentence = "Rust’s rich type system and ownership model guarantee memory-safety and thread-safety — enabling you to eliminate many classes of bugs at compile-time. ";
+        findSubstring(sentence, "safety");
     }
 }
